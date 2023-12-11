@@ -6,23 +6,97 @@
 </head>
 <body>
     <div class="quiz-container">
-        <div class="question">
-            <p>혼저옵서의 표준어는 무엇인가요?</p>
-        </div>
+        <div class="question">질문 1: 혼저옵서의 표준어는 무엇인가요?</div>
         <div class="options">
-            <input type="radio" id="option1" name="answer" value="어서오세요">
-            <label for="option1">어서오세요</label><br>
-
-            <input type="radio" id="option2" name="answer" value="오셨습니까">
-            <label for="option2">오셨습니까</label><br>
-
-            <input type="radio" id="option3" name="answer" value="감자">
-            <label for="option3">감자</label>
+            <label>
+                <input type="radio" name="answer" value="a"> a) 어서오세요
+            <label>
+                <input type="radio" name="answer" value="b"> b) 안녕하세요
+            </label>
+            <label>
+                <input type="radio" name="answer" value="c"> c) 잘가요
+            </label>
         </div>
-        <button onclick="checkAnswer()">제출</button>
+        <button id="checkAnswer">정답 확인</button>
     </div>
 
     <script>
+        // 퀴즈 데이터 배열
+const quizData = [
+    {
+        question: "질문 1: 혼저옵서의 표준어는 무엇인가요?",
+        options: ["a) 어서오세요", "b) 안녕하세요", "C) 잘가요"],
+        answer: "a"
+    },
+    {
+        question: "질문 2: 도세기는 무슨 동물일까요?",
+        options: ["a) 호랑이", "b) 돼지", "c) 토끼"],
+        answer: "b"
+    },
+    {
+        question: "질문 3: 옵데강의 표준어는 무엇인가요?",
+        options: ["a) 어디가십니까", "b) 오셨습니까", "c) 얼마인가요?"],
+        answer: "b"
+    },
+    {
+        question: "질문 4: 감저는 무슨 음식일까요?",
+        options: ["a) 감자", "b) 감", "c) 고구마"],
+        answer: "c"
+    }
+];
+
+// 현재 퀴즈 인덱스
+let currentQuizIndex = 0;
+
+// 정답 확인 버튼 클릭 시
+document.getElementById("checkAnswer").addEventListener("click", function () {
+    const selectedAnswer = document.querySelector("input[name='answer']:checked");
+
+    if (selectedAnswer) {
+        const userAnswer = selectedAnswer.value;
+        const correctAnswer = quizData[currentQuizIndex].answer;
+
+        if (userAnswer === correctAnswer) {
+            alert("정답입니다!");
+            // 현재 퀴즈 인덱스를 증가시켜 다음 문제로 이동
+            currentQuizIndex++;
+            if (currentQuizIndex < quizData.length) {
+                loadQuiz();
+            } else {
+                alert("모든 문제를 푸셨습니다.");
+            }
+        } else {
+            alert("틀렸습니다. 다시 시도해보세요.");
+        }
+    } else {
+        alert("답을 선택하세요.");
+    }
+});
+
+// 퀴즈 데이터를 화면에 로드하는 함수
+function loadQuiz() {
+    const questionContainer = document.querySelector(".question");
+    const optionsContainer = document.querySelector(".options");
+
+    const currentQuiz = quizData[currentQuizIndex];
+    questionContainer.textContent = currentQuiz.question;
+
+    // 이전 문제의 답안을 제거
+    while (optionsContainer.firstChild) {
+        optionsContainer.removeChild(optionsContainer.firstChild);
+    }
+
+    // 답안 옵션을 추가
+    currentQuiz.options.forEach(function (option) {
+        const label = document.createElement("label");
+        label.innerHTML = `<input type="radio" name="answer" value="${option.charAt(0)}"> ${option}`;
+        optionsContainer.appendChild(label);
+    });
+}
+
+// 초기 퀴즈 로딩
+loadQuiz();
+
         function checkAnswer() {
     var selectedOption = document.querySelector('input[name="answer"]:checked');
     if (!selectedOption) {
