@@ -1,0 +1,46 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* 배경색 설정 */
+}
+
+.quiz-container {
+    background-color: white;
+    width: 60%;
+    margin: 50px auto; /* 중앙 정렬 */
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* 그림자 효과 */
+    border-radius: 8px;
+}
+
+.question {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.options {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.options label {
+    display: block;
+    margin: 10px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

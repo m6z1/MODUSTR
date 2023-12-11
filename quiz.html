@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>사투리 퀴즈</title>
+    <link rel="stylesheet" type="text/css" href="styleQuiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="question">
+            <p>혼저옵서의 표준어는 무엇인가요?</p>
+        </div>
+        <div class="options">
+            <input type="radio" id="option1" name="answer" value="어서오세요">
+            <label for="option1">어서오세요</label><br>
+
+            <input type="radio" id="option2" name="answer" value="오셨습니까">
+            <label for="option2">오셨습니까</label><br>
+
+            <input type="radio" id="option3" name="answer" value="감자">
+            <label for="option3">감자</label>
+        </div>
+        <button onclick="checkAnswer()">제출</button>
+    </div>
+
+    <script>
+        function checkAnswer() {
+    var selectedOption = document.querySelector('input[name="answer"]:checked');
+    if (!selectedOption) {
+        alert('답을 선택해주세요!');
+        return;
+    }
+    var answer = selectedOption.value;
+    if (answer === "어서오세요") {
+        alert('정답입니다!');
+    } else {
+        alert('틀렸습니다. 다시 시도해보세요.');
+    }
+}
+
+    </script>
+</body>
+</html>
