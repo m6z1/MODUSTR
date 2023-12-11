@@ -4,29 +4,66 @@ body {
     background-color: #f0f0f0;
 }
 
-.quiz-container {
-    width: 80%;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.main-title {
+    margin-bottom: 20px;
 }
 
-.categories {
-    margin-top: 20px;
+.title-background {
+    background-color: #87CEEB; /* 하늘색 배경 */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.quiz-container {
+    width: 100%; /* 컨테이너 너비를 100%로 설정 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* 요소들 사이의 공간을 균등하게 분배 */
 }
 
 .category-button {
-    background-color: #007bff;
+    background-color: #ffb1be;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px;
     margin: 5px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    width: calc(33% - 10px); /* 각 버튼의 너비를 33%에서 마진을 뺀 값으로 조정 */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
-.category-button:hover {
-    background-color: #0056b3;
+.category-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.info-icon {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.info-icon img {
+    width: 60px;
+    height: 60px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    right: 10px;
+    top: 50px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    width: 300px;
 }

@@ -5,15 +5,50 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="quiz-container">
-        <h1>사투리 퀴즈</h1>
-        <div class="categories">
-            <button class="category-button" id="jeju">제주</button>
-            <button class="category-button" id="gyeongsang">경상</button>
-            <button class="category-button" id="gangwon">강원</button>
-            <button class="category-button" id="chungcheong">충청</button>
-            <button class="category-button" id="jeolla">전라</button>
+    <div class="main-title">
+        <div class="title-background">
+            <h1>다함께 사투리</h1>
         </div>
     </div>
+    <div class="quiz-container"> <!-- 버튼들을 별도의 컨테이너로 분리 -->
+        <button class="category-button" id="jeju">
+            <img src="jeju.jpg" alt="제주 이미지" class="category-image">
+            제주
+        </button>
+        <button class="category-button" id="gyeongsang">
+            <img src="gyeongsang.jpg" alt="경상 이미지" class="category-image">
+            경상
+        </button>
+        <button class="category-button" id="gangwon">
+            <img src="gangwon.jpg" alt="강원 이미지" class="category-image">
+            강원
+        </button>
+        <button class="category-button" id="chungcheong">
+            <img src="chungcheong.jpg" alt="충청 이미지" class="category-image">
+            충청
+        </button>
+        <button class="category-button" id="jeolla">
+            <img src="jeolla.jpg" alt="전라 이미지" class="category-image">
+            전라
+        </button>
+    </div>
+    <div class="info-icon">
+        <img src="question.png" alt="정보" id="infoButton">
+    </div>
+
+    <div class="popup" id="popup">
+        <p>방언을 학습하고 포인트를 얻어서 각 지역의 특산물로 교환할 수 있습니다!</p>
+    </div>
+    <script>
+        document.getElementById('infoButton').onclick = function() {
+            var popup = document.getElementById('popup');
+            if (popup.style.display === 'none') {
+                popup.style.display = 'block';
+            } else {
+                popup.style.display = 'none';
+            }
+        };
+    </script>
+    
 </body>
 </html>
