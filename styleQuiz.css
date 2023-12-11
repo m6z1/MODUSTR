@@ -44,3 +44,19 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+.top-icons {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.top-icons a {
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.top-icons img {
+    width: 30px;
+    height: 30px;
+}
