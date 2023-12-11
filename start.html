@@ -14,6 +14,7 @@
         <button class="category-button" id="jeju">
             <img src="jeju.jpg" alt="제주 이미지" class="category-image">
             제주
+        
         </button>
         <button class="category-button" id="gyeongsang">
             <img src="gyeongsang.jpg" alt="경상 이미지" class="category-image">
@@ -48,6 +49,14 @@
                 popup.style.display = 'none';
             }
         };
+        document.getElementById('jeju').onclick = function() {
+        // '제주' 버튼에 대한 클릭 이벤트 처리
+        // 예시: 특정 페이지로 이동
+        location.href = 'category.html';
+
+        // 또는 제주도에 대한 정보를 표시하는 코드
+        // 예시: alert('제주도에 대한 정보입니다.');
+    };
     </script>
     
 </body>
