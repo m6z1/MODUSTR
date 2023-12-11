@@ -19,6 +19,10 @@
             <img src="quiz.png" alt="퀴즈 풀기" id="quizButton">
             <p>퀴즈 풀기</p>
         </div>
+        <div class="image-button">
+            <img src="mandarin.png" alt="포인트 확인하기" id="pointButton">
+            <p>포인트 확인하기</p>
+        </div>
     </div>
     <!-- 기존의 카테고리 버튼들 -->
     <div class="quiz-container">
@@ -43,6 +47,24 @@
                 popup.style.display = 'none';
             }
         };
+
+        document.getElementById('studyButton').onclick = function() {
+        // '제주' 버튼에 대한 클릭 이벤트 처리
+        // 예시: 특정 페이지로 이동
+        location.href = 'study.html';
+        };
+
+        document.getElementById('quizButton').onclick = function() {
+        // '제주' 버튼에 대한 클릭 이벤트 처리
+        // 예시: 특정 페이지로 이동
+        location.href = 'quiz.html';
+    };
+
+    document.getElementById('pointButton').onclick = function() {
+        // '제주' 버튼에 대한 클릭 이벤트 처리
+        // 예시: 특정 페이지로 이동
+        location.href = 'point.html';
+    };
     </script>
 </body>
 </html>

@@ -5,6 +5,10 @@ body {
     z-index: 1;
 }
 
+.main-title {
+    margin-bottom: 20px;
+}
+
 body::before {
     content: '';
     position: absolute;
