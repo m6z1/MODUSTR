@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>사투리 학습</title>
+    <link rel="stylesheet" type="text/css" href="styleCard.css">
+</head>
+<body>
+    <div class="main-title">
+        <div class="title-background">
+            <h1>제주도 방언 학습하기</h1>
+        </div>
+    </div>
+    <div class="back-icon">
+        <img src="back.png" alt="뒤로가기" id="backButton">
+    </div>
+
+    <div class="info-icon">
+        <img src="question.png" alt="정보" id="infoButton">
+    </div>
+
+    <div class="popup" id="popup">
+        <p>마우스를 카드 위에 가져다 대면 표준어를 확인할 수 있습니다.</p>
+    </div>
+    
+    <div class="card-container">
+        <div class="card">
+            <div class="card-front">혼저옵서</div>
+            <div class="card-back">어서오세요</div>
+        </div>
+        <div class="card">
+            <div class="card-front">옵데강</div>
+            <div class="card-back">오셨습니까</div>
+        </div>
+        <div class="card">
+            <div class="card-front">감저</div>
+            <div class="card-back">고구마</div>
+        </div>
+        <div class="card">
+            <div class="card-front">지실</div>
+            <div class="card-back">감자</div>
+        </div>
+        <div class="card">
+            <div class="card-front">모물</div>
+            <div class="card-back">메밀</div>
+        </div>
+        <div class="card">
+            <div class="card-front">어욱</div>
+            <div class="card-back">억새</div>
+        </div>
+        <div class="card">
+            <div class="card-front">태역</div>
+            <div class="card-back">잔디</div>
+        </div>
+        <div class="card">
+            <div class="card-front">아방</div>
+            <div class="card-back">아버지</div>
+        </div>
+        <div class="card">
+            <div class="card-front">어멍</div>
+            <div class="card-back">어머니</div>
+        </div>
+        <div class="card">
+            <div class="card-front">도세기</div>
+            <div class="card-back">돼지</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var cards = document.querySelectorAll('.card');
+    
+            cards.forEach(function(card) {
+                card.addEventListener('click', function() {
+                    card.classList.toggle('flipped');
+                });
+            });
+        });
+        document.getElementById('infoButton').onclick = function() {
+            var popup = document.getElementById('popup');
+            if (popup.style.display === 'none') {
+                popup.style.display = 'block';
+            } else {
+                popup.style.display = 'none';
+            }
+        };
+        document.getElementById('backButton').onclick = function() {
+        // '제주' 버튼에 대한 클릭 이벤트 처리
+        // 예시: 특정 페이지로 이동
+        location.href = 'category.html';
+        };
+    </script>    
+</body>
+</html>
