@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>다함께 사투리</title>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<body>
+    <div class="main-title">
+        <div class="title-background">
+            <h1>제주도</h1>
+        </div>
+    </div>
+    <div class="button-container">
+        <div class="image-button">
+            <img src="study.png" alt="학습하기" id="studyButton">
+            <p>학습하기</p>
+        </div>
+        <div class="image-button">
+            <img src="quiz.png" alt="퀴즈 풀기" id="quizButton">
+            <p>퀴즈 풀기</p>
+        </div>
+    </div>
+    <!-- 기존의 카테고리 버튼들 -->
+    <div class="quiz-container">
+        <!-- 버튼 코드 -->
+    </div>
+
+    <div class="info-icon">
+        <img src="question.png" alt="정보" id="infoButton">
+    </div>
+
+    <div class="popup" id="popup">
+        <p>방언을 학습하고 포인트를 얻어서 각 지역의 특산물로 교환할 수 있습니다!</p>
+    </div>
+    
+    <!-- 팝업 스크립트 -->
+    <script>
+        document.getElementById('infoButton').onclick = function() {
+            var popup = document.getElementById('popup');
+            if (popup.style.display === 'none') {
+                popup.style.display = 'block';
+            } else {
+                popup.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    position: relative; /* 배경 투명도 레이어를 위해 relative 설정 */
+    z-index: 1;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('jeju.jpg'); /* 배경 이미지 */
+    background-size: cover; /* 배경 이미지 크기 조정 */
+    background-repeat: no-repeat; /* 배경 이미지 반복 방지 */
+    background-attachment: fixed; /* 배경 이미지 고정 */
+    opacity: 0.2; /* 투명도 20% */
+    z-index: -1;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-button {
+    display: inline-block; /* 블록 형태로 이미지와 텍스트를 포함 */
+    width: auto;
+    margin: 10px 30px; /* 버튼 간의 간격을 30px로 조정 */
+    cursor: pointer;
+}
+
+.image-button img {
+    width: 100px;
+    height: auto;
+}
+
+.image-button p {
+    margin-top: 10px; /* 이미지와 텍스트 사이의 간격 */
+    font-size: 16px;
+}
+
+.info-icon {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.info-icon img {
+    width: 60px;
+    height: 60px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    right: 10px;
+    top: 50px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    width: 300px;
+}
