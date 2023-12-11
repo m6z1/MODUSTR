@@ -5,3 +5,4 @@
 
 
 ## 배포 주소 : https://m6z1.github.io/MODUSTR/start.html
+**현재는 프로토 타입으로 제주도만 사용 가능**
